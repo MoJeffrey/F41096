@@ -64,7 +64,6 @@ def main():
             logging.info('=================================================================')
             prev_process_time = time.time()
 
-
         if cv2.waitKey(1) & 0xFF == ord("q"):
             break
 

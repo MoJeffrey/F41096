@@ -7,6 +7,7 @@
 @Date    ：2024/4/25 22:03 
 """
 import logging
+import os
 import time
 from typing import List
 
@@ -23,6 +24,10 @@ class ExcelWrite:
     __fileName: str = None
 
     def __init__(self):
+
+        if not os.path.exists('./output'):
+            os.makedirs('./output')
+
         dt = datetime.fromtimestamp(time.time())
         self.__fileName = dt.strftime('%Y-%m-%d %H:%M:%S:%f')
         self.__fileName = str(time.time())
