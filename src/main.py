@@ -32,6 +32,7 @@ def getData(results, EW: ExcelWrite, second: int):
             obj.setOldResultObj(data_list[id])
         else:
             EW.writeFId(obj.getId())
+            obj.setFirstObj()
 
         Result = obj.getResult()
         EW.write(second, obj.getId(), Result)
